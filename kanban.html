@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+      .card {
+        margin-bottom: 10px;
+        transition: all .2s ease-in-out;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+      }
+
+      .card-header {
+        background-color: #F8F8F8;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        padding: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .card-body {
+        background-color: #FAFAFA;
+        padding: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .column {
+        border: 1px solid #E6E6E6;
+        padding: 10px;
+        background-color: #F5F5F5;
+        border-radius: 10px;
+      }
+
+      .column-header {
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .red {
+        background-color: #FFD6D6;
+      }
+
+      .yellow {
+        background-color: #FFFFC2;
+      }
+
+      .green {
+        background-color: #C6FFC1;
+      }
+
+      .blue {
+        background-color: #C1ECFF;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="container-fluid">
+      <h1 class="text-center mt-5 mb-5">Обучение</h1>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="column red" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="column-header">Текущие действия</div>
+            <div class="card" id="card2" draggable="true" ondragstart="drag(event)">
+              <div class="card-header">Изучить, что такое инкапсуляция и зачем она нужна</div>
+              <div class="card-body">*ссылка на материал*</div>
+            </div>
+            <div class="card" id="card1" draggable="true" ondragstart="drag(event)">
+              <div class="card-header">Сделать практическую №1</div>
+              <div class="card-body">*ссылка на практическую работу*</div>
+            </div>
+            <div class="card" id="card2" draggable="true" ondragstart="drag(event)">
+              <div class="card-header">Изучить функцию sort()</div>
+              <div class="card-body">*ссылка на материал*</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="column yellow" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="column-header">Текущие проекты</div>
+            <div class="card" id="card3" draggable="true" ondragstart="drag(event)">
+              <div class="card-header">Изучить три основные парадигмы ООП</div>
+              <div class="card-body">1. Изучить что такое инкапсуляция и зачем она нужна.</div>
+              <div class="card-body">2. Примеры использования инкапсуляции.</div>
+              <div class="card-body">3. Полиморфизм</div>
+              <div class="text-center h2">...</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="column green" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="column-header">Будущие действия и проекты</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="column blue" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="column-header">Мероприятия</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function allowDrop(event) {
+        event.preventDefault();
+      }
+
+      function drag(event) {
+        event.dataTransfer.setData("text", event.target.id);
+      }
+
+      function drop(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("text");
+        event.target.appendChild(document.getElementById(data));
+      }
+    </script>
+  </body>
+</html>

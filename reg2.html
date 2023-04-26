@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Categories</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      .window {
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px #ccc;
+        transition: all 0.3s ease;
+      }
+
+      .window:hover {
+        box-shadow: 0px 0px 20px #ccc;
+      }
+
+      .web-design {
+        border-color: #4d4dff;
+        background-color: #f2f2f2;
+      }
+
+      .marketing {
+        border-color: #ff66cc;
+        background-color: #f2f2f2;
+      }
+      
+      .backend {
+          border-color: black;
+          background-color: #f2f2f2;
+      }
+      
+      .data-science {
+          border-color: lightgreen;
+          background-color: #f2f2f2;
+      }
+
+      .window-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      .window-description {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .btn-primary {
+        background-color: #4d4dff;
+        border-color: #4d4dff;
+      }
+
+      .btn-primary:hover {
+        background-color: #3385ff;
+        border-color: #3385ff;
+      }
+
+      #particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 190%;
+  z-index: -1;
+  background-color: #630d13;
+}
+
+
+    </style>
+    <script src="particles.js"></script>
+  </head>
+  <body>
+    <div class="container my-5">
+      <h1 class="text-center mb-4 text-white ">Выберите направление обучения</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="window web-design">
+            <h2 class="window-title">Веб-дизайн</h2>
+            <p class="window-description">Узнаете, как проектировать и разрабатывать отзывчивые веб-сайты с помощью HTML, CSS и JavaScript.</p>
+            <img src="https://www.pngplay.com/wp-content/uploads/5/Web-Design-Purple-PNG.png" class="container">
+            <a href="kanban.html" class="btn btn-primary">Начать курс</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="window marketing">
+            <h2 class="window-title">Маркетинг</h2>
+            <p class="window-description">Поймете, как создавать и реализовывать эффективные маркетинговые стратегии с использованием социальных сетей и СМИ</p>
+            <img src="https://www.pngall.com/wp-content/uploads/5/Digital-Marketing-PNG-File-Download-Free.png" class="container">
+            <a href="kanban.html" class="btn btn-primary">Начать курс</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="window backend">
+            <h2 class="window-title">Бэкенд-разработка</h2>
+            <p class="window-description">Научитесь использовать фреймворки Django и Flask, познакомитесь с базами данных</p>
+            <img src="https://media.tproger.ru/uploads/2020/10/iconfinder-icon-52-cover-icon-original.png" class="container my-4">
+            <a href="kanban.html" class="btn btn-primary">Начать курс</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="window data-science">
+            <h2 class="window-title">Data-science</h2>
+            <p class="window-description">Использование современных методов машинного обучения позволят вам открывать новые горизонты!</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/5278/5278402.png" class="container my-4">
+            <a href="kanban.html" class="btn btn-primary">Начать курс</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="particles-js"></div>
+    <script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 110,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+
+
+/* ---- stats.js config ---- */
+
+var count_particles, stats, update;
+stats = new Stats;
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+document.body.appendChild(stats.domElement);
+count_particles = document.querySelector('.js-count-particles');
+update = function() {
+  stats.begin();
+  stats.end();
+  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+  }
+  requestAnimationFrame(update);
+};
+requestAnimationFrame(update);
+    </script>
+  </body>
+</html>
